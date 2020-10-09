@@ -3,6 +3,7 @@ const mysql=require("mysql");
 const app=express();
 const dotenv=require('dotenv');
 const path=require('path');
+const cookieParser=require('cookie-parser');
 
 dotenv.config({ path:'./.env'});
 const db=mysql.createConnection({
@@ -13,6 +14,11 @@ const db=mysql.createConnection({
 });
 const publicdirectory=path.join(__dirname,'./public');
 
+app.use(express.urlencoded({extended:false}));
+
+app.use(express.json());
+ 
+app.use(cookieParser());
 app.use(express.static(publicdirectory));
 app.set('view engine','hbs');
 db.connect((error)=>{
@@ -23,9 +29,10 @@ db.connect((error)=>{
     else
     console.log("Mysql connected...");
 })
-app.get("/",(req,res)=>{
-    res.render("index");
-});
+app.use('/',require('./routes/pages'));
+
+
+app.use('/auth',require('./routes/auth'));
 app.listen(8000,()=>{
     console.log("Server started on port 8000");
 });

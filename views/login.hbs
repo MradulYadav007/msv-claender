@@ -14,46 +14,24 @@
         <li><a href="/login">LOGIN</a></li>
         <li><a href="/signup">REGISTER</a></li>
     </ul>
-    <header id="signinsignup">
+    <header id="signin">
     <div class="container mt-4">
     <div class="card">
   <div class="card-header">
-      Register Here
+      Login Here
     </div>
     <div class="class-body">
-        <form action="/auth/signup" method="POST">
-  
-
-  <div class="form-group">
-    <label for="Username">Username</label>
-    <input type="text" class="form-control" id="Username" name="username">
-  </div>
-
-
+        <form action="/auth/login" method="POST">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" name="email">
-  </div>
-
-  <div class="form-group">
-    <label for="Mobile">Mobile Number</label>
-    <input type="text" class="form-control" id="Mobile" name="mobnum">
+    <input type="email" class="form-control" id="exampleInputEmail1" name="name">
   </div>
 
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" name="password">
   </div>
-   <div class="form-group">
-    <label for="passconfirm">Confirm Password</label>
-    <input type="password" class="form-control" id="passconfirm" name="password_confirm">
-  </div>
-
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Remember me</label>
-  </div>
-
+  
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
     </div>
