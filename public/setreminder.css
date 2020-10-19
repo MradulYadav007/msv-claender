@@ -1,0 +1,26 @@
+nav{
+    background-color:rgba(217,3,104,100);
+    padding: 0.5%;
+}
+body{
+    background-image: url(../hogwarts.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    font-family: fantasy;
+    font-weight: bolder;
+}
+#set{
+    padding: 5px 5px;
+    margin-top: 5px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+#add{
+    padding: 10px 10px;
+    margin: 2% 50% ;
+    background-color:rgba(157,141,241,100);
+
+}

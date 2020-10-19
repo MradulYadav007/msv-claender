@@ -85,15 +85,16 @@ const db=mysql.createConnection({
           ),
        }
 
-       const tok={
-        id1: id
-      };
-      exports= {tok};
+
+       //setting cookies
        res.cookie('jwt',token,cookieOption);
+
+                  
        res.status(200).redirect("/home");
       }
-   })
-  } catch (error) {
+   });
+  } 
+  catch (error) {
      console.log(error);
   }
   }
@@ -109,3 +110,6 @@ const db=mysql.createConnection({
     res.cookie('jwt',null,cookieOption);
     res.status(200).redirect("/");
   }
+  var tok={
+    id1: id
+  };

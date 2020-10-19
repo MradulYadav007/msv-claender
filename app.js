@@ -33,6 +33,7 @@ app.use('/',require('./routes/pages'));
 
 //app.use('/',require('./routes/currentuser'));
 app.use('/auth',require('./routes/auth'));
+app.use('/set',require('./routes/set'));
 app.listen(8000,()=>{
     console.log("Server started on port 8000");
 });
