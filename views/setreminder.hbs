@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/setreminder.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var cook=document.cookie.length;
+        if(cook<1)
+        {
+            window.location.href="/login";
+        }
+    </script>
+    <header>
+        <nav>
+       <h1 align="center">Add the work you want to do</h1>
+       </nav>
+       
+       
+       <form id="set" action="/set/setreminder" method="POST">
+       <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">#</span>
+  </div>
+  <input type="date" class="form-control" placeholder="Date" name="date">
+</div>
+
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Task</span>
+  </div>
+  <textarea class="form-control" name="task"></textarea>
+</div>
+<button id="add" type="submit" class="btn btn-dark">Add</button>
+</form>
+       <a href="/home"><button id="add" type="button" class="btn btn-dark">Back</button></a> 
+
+    {{#if message }}
+    <h4 class="alert alert-danger mt-4">{{message}}</h4>
+    {{/if}}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   </header>
+</body>
+</html>
