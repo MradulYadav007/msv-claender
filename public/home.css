@@ -39,5 +39,10 @@ nav{
     background-position: center;
 }
 h1{
+    color:wheat;
+    margin-left: 37%;
+    padding-top: 550px;
+}
+h2{
     color: white;
 }

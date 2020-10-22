@@ -23,7 +23,7 @@ exports.setreminder=(req,res)=>{
     }
     else{
 
-    db.query('INSERT INTO todo SET ?',{user: user,date: day,work:task },(error,results)=>{
+    db.query('INSERT INTO todo SET ?',{user: user,date: day,work:task ,status: 0},(error,results)=>{
         if(error){
             console.log(error);
         }

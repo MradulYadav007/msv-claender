@@ -21,6 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(publicdirectory));
 app.set('view engine','hbs');
+app.use(express.static('views'))
 db.connect((error)=>{
     if(error)
     {
@@ -34,6 +35,7 @@ app.use('/',require('./routes/pages'));
 //app.use('/',require('./routes/currentuser'));
 app.use('/auth',require('./routes/auth'));
 app.use('/set',require('./routes/set'));
+
 app.listen(8000,()=>{
     console.log("Server started on port 8000");
 });

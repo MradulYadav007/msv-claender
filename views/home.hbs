@@ -15,16 +15,29 @@
             window.location.href="/login";
         }
     </script>
+    
     <header>
         <div class="home">
     <ul>
-        <li><a href="/home">HOME</a></li>
+        <li><a href="/home" onclick="/routes/users">HOME</a></li>
         <li><a href="#">ABOUT US</a></li>
         <li><a href="/setreminder">SET REMINDER</a></li>
-        <li><a href="#">TO DO LIST</a></li>
+        <li><a href="#">TO DO LIST</a>  
+        </li>
         <li><a href="/logout">LOG OUT</a></li>
     </ul>
-    <h1><script src="js/set.js"></script></h1>
+
+   <h2 id="day"></h2>
+
+   <h1>Hi, welcome {{userData }}</h1>
+   <script>
+    var today = new Date();
+   var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(); 
+   var dateTime = date
+   document.getElementById("day").innerHTML=dateTime;
+   alert(dateTime);
+</script>
     </header>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 </body>
